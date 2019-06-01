@@ -1,0 +1,117 @@
+
+	.container-fluid {
+	background-color: #f5f5ef;	padding: 40px 55px;
+	}
+	.wrapper {
+	padding: 50px 60px;	background-color: white;	border: solid #d9d9d9 4px;	border-radius: 20px; padding-bottom: 80px;
+	}
+	.articleTitle {
+	text-align: center;	font-family: oratorstd;	font-size: 10vw;
+	}
+	.articleInfo {
+	text-align: center;	font-family: futuras;	font-size: 5vw;
+	}
+	.articleImage {
+	padding-top: 30px;
+	}
+	#postSlider {
+	position: relative;	padding: 0px 10px;	height: 42vw;
+	}
+	#postSlider > .carousel-inner > .item > img {
+	margin: auto;	height: 42vw;
+	}
+	#postSlider > .carousel-control.left, #postSlider > .carousel-control.right {
+	background-image: none;	color: #d9d9d9;	
+	}
+	#postSlider > .carousel-control.left span, #postSlider > .carousel-control.right span {
+	font-size: 80px;
+	}
+	#postSlider > .carousel-control.right span {
+	margin-right: 32px;
+	}
+	#postSlider > .carousel-indicators {
+   bottom: 0px;
+   }
+   .carousel-fade .carousel-inner .item {
+  opacity: 0;  transition-property: opacity;
+  }
+  .carousel-fade .carousel-inner .active {
+  opacity: 1;
+  }
+  .carousel-fade .carousel-inner .active.left,.carousel-fade .carousel-inner .active.right {
+  left: 0;  opacity: 2;  z-index: 1;
+  }
+  .carousel-fade .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+  }
+  .carousel-fade .carousel-control {
+	z-index: 5;	display: inline-block;
+	}
+	@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;      -webkit-transform: translate3d(0, 0, 0);              transform: translate3d(0, 0, 0);    
+      }
+          .carousel-fade .carousel-inner > .item.prev,    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;      -webkit-transform: translate3d(0, 0, 0);              transform: translate3d(0, 0, 0);    
+      }
+          .carousel-fade .carousel-inner > .item.next.left,    .carousel-fade .carousel-inner > .item.prev.right,    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;      -webkit-transform: translate3d(0, 0, 0);              transform: translate3d(0, 0, 0);    
+      }
+
+      	}
+      	.articleContent {
+	text-align: justify;	font-family: futuras;	font-size: 6vw;	padding: 30px 10px;	padding-top: 50px;
+	}
+	.articleButton {
+	position: relative;	padding: 20px 0px;	padding-top: 50px; 
+	}
+	
+	.articleButton button {
+		font-family: LemonMilk; font-size: 40px;
+	}
+	
+	#prev {
+	box-shadow: 5px 5px 3px #b3b3b3; 
+	outline: none;
+	}
+	#next {
+  	float: right; 
+  	box-shadow: -5px 5px 3px #b3b3b3; 
+  	outline: none;
+  }
+  .wrapper2 {
+	margin-top: 30px;	padding: 40px 55px;	background-color: white;	border: solid #d9d9d9 5px;	border-radius: 15px;
+	}
+	.topicBoxTitle {
+	text-align: left;	font-family: LemonMilk;	font-size: 7.5vw;
+	}
+	.wrapper2 a {
+	text-decoration: none;
+	}
+	.topicPost {
+	padding-top: 35px;	border-bottom: solid #d9d9d9 4px;	color: black;	cursor: pointer;
+	}
+		.topicTitle {
+	text-align: left;	font-family: futuras;	font-size: 5.5vw;
+	}
+	@media screen and (min-width:1024px) {
+	
+	}
+	@media only screen and (max-width: 1065px) {
+	
+	}
+	@media only screen and (max-width: 767px) {
+
+}
+/* Chrome, Safari, Opera */@-webkit-keyframes spin {
+    100% {
+ -webkit-transform: rotate(360deg); 
+ }
+
+ }
+ /* Standard syntax */@keyframes spin {
+	100% {
+ -webkit-transform: rotate(360deg); transform:rotate(360deg); 
+ }
+
+ }

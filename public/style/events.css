@@ -1,0 +1,446 @@
+
+
+@font-face {
+  font-family: futuras;
+  src: url(futura.ttf);
+}
+
+.calendarBox {
+	background-color: #f5f5ef;
+	padding: 1% 2vw;
+	padding-top: 2.5vw;
+}
+
+.calendarAllBox {
+	width: 33%;
+	margin-right: 1%; 
+	background-color: white;
+	padding: 40px;	
+	border: solid #d9d9d9 2px;
+	border-radius: 10px;
+}
+
+.kalender, .kalender td, .kalender tr {
+	width: 100%;
+	border : 2px solid black;
+	font-family: montserrat;
+	font-size: 11px;
+}
+
+.kalender td, .kalender tr {
+	padding  : 3px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.kalender td {
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.calendarToday {
+	background-color: #FDE758;
+}
+
+.calendarEvent {
+	background-color: #00D1FF;
+}
+
+#calendarPrev, #calendarNext {
+	font-size: 15px;
+	font-family: montserrat;
+	box-shadow: 3px 3px 3px #b3b3b3;
+	outline: none;
+}
+
+#calendarPrev {
+	box-shadow: 0px 3px 3px #b3b3b3;
+}
+
+.calendarCurrentBox {
+	overflow: auto;
+	max-height: 632px;
+	background-color: white;
+	width: 66%;
+	border: solid #d9d9d9 2px;
+	border-radius: 10px;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#wrapper{
+	padding: 20px;
+	overflow: auto;
+}
+
+#currentDate {
+	padding: 10px;
+	font-family: montserrat;
+	font-size: 40px;
+}
+
+#currentEvent {
+	padding-left: 10px;
+	font-family: montserrat;
+	font-size: 30px;
+	letter-spacing: -3px;
+	font-weight: bold;
+}
+
+h1{
+    font-family: montserrat !important;
+}
+.postEvents {
+	position: relative;
+	padding-bottom: 15px;
+	box-shadow: 0px 3px 9px #b3b3b3;
+}
+
+.imgEvents {
+	padding-top: 15px;
+	padding-left: 25px;
+}
+
+.imgEvents > img {
+	width: 200px;
+	height: 180px;
+}
+
+.infoEvents {
+	padding-top: 15px;
+	padding-right: 25px;
+	text-align: justify;
+}
+		
+.titleEvents {
+	text-align: center;
+	padding-bottom: 7px;
+}
+
+.titleEvents > h2 {
+	font-family: montserrat;
+	margin-top: 0px;
+}
+
+.snippetEvents {
+	font-family: futuras;
+	text-align: justify;
+	font-size: 16px;
+}
+
+.readMoreEvents {
+	padding-top: 20px;
+	padding-bottom: 3px;
+	text-align: right;
+	font-family: montserrat;
+}
+
+.readMoreEvents button {
+	padding-bottom: 5px;
+	border: none;
+	background-color: white;
+	color: black;
+	font-size: 18px;
+	width: 160px;
+	transition: all 0.5s;
+	cursor: pointer;
+	outline: none;
+	/* box-shadow: 1px 1px 3px #b3b3b3; */
+}
+
+.readMoreEvents button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.readMoreEvents button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 12px;
+	content: "\e258";
+	position: absolute;
+	opacity: 0;
+	top: 27%;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.readMoreEvents button:hover span {
+	padding-right: 22px;
+}
+
+.readMoreEvents button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+	.calendarAllBox {
+		width: 100%;
+		margin-bottom: 3%;
+	}
+	.calendarCurrentBox {
+		max-height: 628px;
+		width: 100%;
+	}
+	
+	.imgEvents {
+		text-align: center;
+	}
+	
+	.snippetEvents {
+		height: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 0px;
+		text-align: justify;
+	}
+		
+	.daysClk, .hoursClk, .minutesClk, .secondsClk  {
+		padding-top: 10px;
+		width: 93%;
+		margin-left: 3%;
+		margin-top: 5px;
+		box-shadow: 3px -3px 10px #b3b3b3;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.daysClk, .hoursClk, .minutesClk, .secondsClk {
+		padding-top: 10px;
+		width: 24%;
+		margin-left: 0.6%;
+		box-shadow: 7px 7px 7px #b3b3b3;
+	}
+}
+
+#clockdiv {
+	padding: 0 2vw;
+	background-color: #f5f5ef;
+	font-family: montserrat;
+	font-size: 36px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#wrapper2 {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-bottom: 1vw;
+	background-color: white;
+	border: solid #d9d9d9 2px;
+	border-radius: 10px;
+}
+/* 
+#eventPembatas {
+	border-style: solid;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	height: 20px;
+	border-color: #D9D9D9;
+} */
+
+#eventContent2 {
+	background-color: #f5f5ef;
+	padding: 1% 2vw;
+	padding-bottom: 2.5vw;
+}
+
+#wrapper3 {
+	background-color: white;
+	border: solid #d9d9d9 2px;
+	border-radius: 10px;
+}
+
+.titleBox {
+	font-family: montserrat;
+	font-size: 40px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.eventBox {
+	width: 96%;
+	margin-top: 20px;
+	margin-left: 2%;
+	padding: 30px;
+	opacity: 0;
+	box-shadow: 3px 3px 15px #b3b3b3;
+	border-radius: 10px;
+	-moz-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+	-moz-transform: translate3d(-5vw, 0px, 0px);
+	-webkit-transform: translate3d(-5vw, 0px, 0px);
+	-o-transform: translate(-5vw, 0px);
+	-ms-transform: translate(-5vw, 0px);
+	transform: translate3d(-5vw, 0px, 0px);
+}
+
+.showContent {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0vw, 0px);
+	-webkit-transform: translate3d(0px, 0vw, 0px);
+	-o-transform: translate(0px, 0vw);
+	-ms-transform: translate(0px, 0vw);
+	transform: translate3d(0px, 0vw, 0px);
+}
+
+.eventBoxPicture img {
+	border-radius: 10px;
+	max-height: 17vw;
+}
+
+.eventBoxContent h1 {
+	padding-left: 20px;
+	font-family: montserrat;
+	font-size: 36px;
+	text-align: center;
+	letter-spacing: -1px;
+}
+
+.eventBoxContent p {
+	padding-top: 15px;
+	padding-left: 20px;
+	font-family: futuras;
+	font-size: 19px;
+	text-align: left;
+}
+
+.eventBtnBox {
+	padding-top: 3px;
+	text-align: right;
+	font-family: montserrat;
+}
+
+.eventBtnBox button {
+	padding-bottom: 5px;
+	border: none;
+	background-color: white;
+	color: black;
+	font-size: 23px;
+	width: 160px;
+	transition: all 0.5s;
+	cursor: pointer;
+	outline: none;
+	/* box-shadow: 1px 1px 3px #b3b3b3; */
+}
+
+.eventBtnBox button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.eventBtnBox button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 14px;
+	content: "\e258";
+	position: absolute;
+	opacity: 0;
+	top: 8px;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.eventBtnBox button:hover span {
+	padding-right: 22px;
+}
+
+.eventBtnBox button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.eventsSpace {
+	height: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.eventBoxPicture img{
+		margin: 0 auto; 
+	}
+	
+	.eventBox {
+		margin-top: 25px;
+	}
+	
+	.eventBoxContent h1 {
+		padding: 0px 0px;
+		padding-top: 15px;
+	}
+	
+	.eventBoxContent p {
+		padding: 0px 0px;
+		padding-top: 10px;
+		text-align: justify;
+	}
+}
+
+#loadMoreEvents {
+	font-family: montserrat;
+	text-align: center;
+	padding: 15px 0;
+}
+
+#loadMoreEvents button {
+	padding-bottom: 7px;
+	color: black;
+	border: none;
+	width: 200px;
+	height: 80px;
+	background-color: white;
+	font-size: 25px;
+	transition: all 0.5s;
+	cursor: pointer;
+	outline: none;
+}
+
+#loadMoreEvents button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#loadMoreEvents button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 20px;
+	content: "\e259";
+	position: absolute;
+	opacity: 0;
+	bottom: -19px;
+	left: 60px;
+	transition: 0.5s;
+}
+
+#loadMoreEvents button:hover span {
+	padding-bottom: 20px;
+}
+
+#loadMoreEvents button:hover span:after {
+	opacity: 1;
+	bottom: -10px;
+	left: 60px;
+}
+
+@media only screen and (max-width: 1200px) {	
+	#loadMoreEvents {
+		margin-top: 20px;
+		height: 90px;
+	}
+	
+	#loadMoreEvents button {
+		padding-bottom: 7px;
+		height: 70px;
+	}
+}

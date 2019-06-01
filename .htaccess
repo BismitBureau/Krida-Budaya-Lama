@@ -1,0 +1,41 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^(www.)?kridabudaya.com$
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /public/$1
+RewriteCond %{HTTP_HOST} ^(www.)?kridabudaya.com$
+RewriteRule ^(/)?$ /public/index.php [L]
+RewriteCond %{HTTP_HOST} ^kridabudaya\.web\.id$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.kridabudaya\.web\.id$
+RewriteRule ^/?$ "http\:\/\/kridabudaya\.com" [R=301,L]
+
+SetEnv APP_ENV=local
+SetEnv APP_DEBUG=false
+SetEnv APP_KEY=c2xsHRQUZv7cK64gxr6zuW89O7gq318l
+
+SetEnv DB_HOST=localhost
+SetEnv DB_DATABASE=u3539718_kridabudaya
+SetEnv DB_USERNAME=root
+SetEnv DB_PASSWORD=
+
+SetEnv CACHE_DRIVER=file
+SetEnv SESSION_DRIVER=file
+SetEnv QUEUE_DRIVER=sync
+
+SetEnv REDIS_HOST=127.0.0.1
+SetEnv REDIS_PASSWORD=null
+SetEnv REDIS_PORT=6379
+
+SetEnv MAIL_DRIVER=smtp
+SetEnv MAIL_HOST=mailtrap.io
+SetEnv MAIL_PORT=2525
+SetEnv MAIL_USERNAME=null
+SetEnv MAIL_PASSWORD=null
+SetEnv MAIL_ENCRYPTION=null
+
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit

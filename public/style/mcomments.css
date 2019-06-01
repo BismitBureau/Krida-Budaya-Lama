@@ -1,0 +1,168 @@
+#content {
+	background-color: #f5f5ef;
+}
+
+#bigWords {
+	font-family: montserrat;
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	/*letter-spacing: -5px;*/
+	font-size: 75px;
+	padding-top : 80px;
+}
+
+#address {
+	font-family: montserrat;
+	font-size : 45px;
+	text-align: center;
+	padding: 0 2%;
+	/*letter-spacing: -4px;*/
+	line-height: 80%;
+	padding-top : 80px;
+	padding-bottom: 80px;
+}
+
+#yellowLine {
+	background-color: #fde25f;
+	padding-top: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-family: montserrat;
+	font-size: 38px;
+	text-align: center;
+}
+
+#formcomment {
+	padding-left : 10%;
+	padding-right: 10%;
+	padding-top : 50px;
+	font-size: 25px;
+	border-spacing: 2px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#formcomment span {
+	font-size: 100px;
+}
+
+.formbox {
+	height: 160px;
+}
+
+.formbox, .onelinedform {
+	background-color: white;
+	width: 100%;
+	padding: 20px 25px;
+	border-style: solid;
+	border-color : #20d0ff;
+	border-width: 4px;
+	border-radius: 17px;
+}
+
+.commentinput {
+	width: 100%;
+	border-width: 0px;
+	background-color: white;
+	font-family: futuras;
+	font-size: 60px;
+}
+
+textarea {
+	margin-top: -15px;
+	resize : none;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+.uneditable-input:focus {
+  /* box-shadow: 0 0px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6); */
+  outline: 0 none;
+}
+
+.space {
+	height: 10px;
+}
+
+#submitButton {
+	margin-top: 45px;
+	margin-bottom: 25px;
+	text-align: center;
+	vertical-align: center;
+	font-family: montserrat;
+	width: 180px;
+	height: 180px;
+	padding: 0px;
+	background-color: #fde25f;
+	border-color: #20d0ff;
+	font-size: 50px;
+	border-radius: 50%;
+	border-width: 6px;
+}
+
+@media screen and (min-width:1024px) {	
+
+}
+
+@media only screen and (max-width: 1065px) {
+    .naviBtn {
+    	font-size: 15px;
+    }
+    .topBtn {
+    	font-size: 15px;
+    }
+    .upBtn {
+    	width: 20px;
+    	height: 20px;
+    }
+    .upBtn > img {
+    	width: 15px;
+    	height: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+	.commentinput {
+		font-size: 15px;
+	}
+	#formcomment {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	.formbox {
+		margin-top: 2%;
+		width: 100%;
+		border-style: solid;
+	}
+
+	#bigWords {
+		padding-left : 10%;
+		padding-right: 10%;
+		font-size: 25px;
+	}
+	#address {
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size : 15px;
+	}
+	#yellowLine, #ratakanan {
+		text-align: center;
+	}
+
+	.onelinedform {
+		width: 100%;
+	}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Standard syntax */
+@keyframes spin {
+	100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}

@@ -1,0 +1,204 @@
+@font-face {
+  font-family: LemonMilk;
+  src: url(LemonMilk.otf);
+}
+
+@font-face {
+  font-family: futuras;
+  src: url(futura.ttf);
+}
+
+#commentsContent {
+	background-color: #f5f5ef;
+}
+
+#wrapper {
+	padding-top: 40px;
+}
+
+#bigWords {
+	background-color: #f5f5ef;
+	font-family: montserrat;
+	text-align: center;
+	/*letter-spacing: -5px;*/
+	font-size: 50px;
+	padding-left: 23%;
+	padding-right: 23%;
+	padding-top: 10px;
+	/* border-top: solid 1px #fde25f; */
+	/* box-shadow: 0px 1px 7px #b3b3b3; */
+}
+
+#address {
+	background-color: #f5f5ef;
+	font-family: montserrat;
+	font-size : 20px;
+	text-align: center;
+	/*letter-spacing: -2px;*/
+	padding-left: 23%;
+	padding-right: 23%;
+	padding-bottom: 20px;
+	padding-top: 15px;
+	/* box-shadow: 0px 7px 7px #b3b3b3; */
+}
+
+#yellowLine {
+	background-color: #fde25f;
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-family: montserrat;
+	/* border-bottom: solid 1px #fde25f;  */
+	/* box-shadow: 0px 7px 7px #b3b3b3; */
+	/* box-shadow: 0px 1px 7px #b3b3b3; */
+}
+
+#formcomment {
+	padding-left : 20%;
+	padding-right: 20%;
+	padding-top : 35px;
+	font-size: 25px;
+	border-spacing: 2px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#formcomment span {
+	margin: 10px;
+	margin-left: 0px;
+}
+
+#ratakanan {
+	text-align: right;
+}
+
+.formbox {
+	background-color: white;
+	width: 49%;
+	margin-right: 1%;
+	border-style: solid;
+	border-color : #20d0ff;
+	border-width: 2px;
+	border-radius: 6px;
+	padding-left : 10px;
+	padding-top : 2px;
+	padding-bottom: 2px;
+	padding-right: 10px;
+}
+
+.commentinput {
+	width: 100%;
+	background-color: white;
+	border-width: 0px;
+	font-family: futuras;
+	font-size: 20px;
+}
+
+.onelinedform {
+	background-color: white;
+	margin-top: 0.3%;
+	border-style: solid;
+	border-color : #20d0ff;
+	border-width: 2px;
+	border-radius: 6px;
+	padding-left : 10px;
+	padding-top : 2px;
+	padding-bottom: 2px;
+	padding-right: 10px;
+	width: 99%;
+	border-color : #20d0ff;
+}
+
+textarea {
+	margin-top: 10px;
+	resize : none;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+.uneditable-input:focus {
+  /* box-shadow: 0 0px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6); */
+  outline: 0 none;
+}
+
+#submitButton {
+	margin-top: 25px;
+	margin-bottom: 10px;
+	text-align: center;
+	vertical-align: center;
+	font-family: montserrat;
+	width: 85px;
+	height: 85px;
+	padding: 0px;
+	background-color: #fde25f;
+	border-color: #20d0ff; 
+	font-size: 19px;
+	border-radius: 50%;
+	border-width: 2.5px;
+}
+
+@media screen and (min-width:1024px) {	
+
+}
+
+@media only screen and (max-width: 1065px) {
+    .naviBtn {
+    	font-size: 15px;
+    }
+    .topBtn {
+    	font-size: 15px;
+    }
+    .upBtn {
+    	width: 20px;
+    	height: 20px;
+    }
+    .upBtn > img {
+    	width: 15px;
+    	height: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+	.commentinput {
+		font-size: 15px;
+	}
+	#formcomment {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	.formbox {
+		margin-top: 2%;
+		width: 100%;
+		border-style: solid;
+	}
+
+	#bigWords {
+		padding-left : 10%;
+		padding-right: 10%;
+		font-size: 25px;
+	}
+	#address {
+		padding-left: 10%;
+		padding-right: 10%;
+		font-size : 15px;
+	}
+	#yellowLine, #ratakanan {
+		text-align: center;
+	}
+
+	.onelinedform {
+		width: 100%;
+	}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Standard syntax */
+@keyframes spin {
+	100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}

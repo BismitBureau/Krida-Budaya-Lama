@@ -1,0 +1,387 @@
+@font-face {
+  font-family: LemonMilk;
+  src: url(LemonMilk.otf);
+}
+
+
+@font-face {
+	font-family: futuras;
+	src: url(Futura.ttf);
+}
+
+#galleryContent {
+	background-color: #f5f5ef;
+}
+
+.galleryPost {
+	position: relative;
+	width: 100%;
+	height: 36vw;
+	opacity: 0;
+	-moz-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+	-moz-transform: translate3d(0px, 5vw, 0px);
+	-webkit-transform: translate3d(0px, 5vw, 0px);
+	-o-transform: translate(0px, 5vw);
+	-ms-transform: translate(0px, 5vw);
+	transform: translate3d(0px, 5vw, 0px);
+}
+
+.galleryPost.tes{
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0px, 0px);
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+}
+
+.galleryPost img {
+	width: 100%;
+	height: 36vw;
+}
+
+.galleryInfo {
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 36vw;
+	opacity: 0.1;
+	background: linear-gradient(
+     white, white 50%, black 50%, black
+	);
+	background-size: 100% 202%;
+	text-align: center;
+	
+	-moz-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.galleryInfo:hover {
+	opacity: 0.8;
+	background-position: 100% 100%;
+}
+
+.galleryInfo h1 {
+	margin-top: -10vw;
+	padding: 0vw 10vw;
+	font-size: 4.5vw;
+    font-family: montserrat;	
+	color: white;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.galleryInfo:hover h1 {
+	margin-top: 8vw;
+}
+
+.galleryInfo p{
+	margin-top: 41vw;
+	padding: 0vw 8vw;
+	font-size: 1.75vw;
+	font-family: montserrat;
+	color: white;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.galleryInfo:hover p{
+	margin-top: 3vw;
+}
+
+.gallerySpace {	
+	height: 3vw;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.galleryModal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+	font-family: montserrat;
+	border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.galleryModal-header {
+	padding: 10px 15px;
+    background-color: #fde25f;
+    color: black;
+	border-radius: 10px 10px 0px 0px;
+	border:solid #fddc35 1px;
+}
+
+.galleryModalTitle {
+	font-size: 40px;
+	font-family: LemonMilk;
+}
+
+.galleryModal-body {
+	padding: 10px;	
+	border-left: solid #fddc35 2px;
+	border-right: solid #fddc35 2px;
+}
+
+.galleryModal-footer {
+	background-color: #fde25f;
+    color: black;
+	padding: 15px;
+	border-radius: 0px 0px 10px 10px;
+	border: solid #fddc35 1px;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+/* The Image Box */
+div.imgPost {
+	overflow: hidden;
+    border: 2px solid #fde25f;
+}
+
+div.imgPost:hover {
+    border: 2px solid #e3be02;
+}
+
+/* The Image */
+div.imgPost img {
+    width: 100%;
+    max-height: 200px;
+    cursor: pointer;
+	
+	-moz-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+}
+
+div.imgPost:hover img{
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.imgDesc {
+	display: none;
+	text-align: center;
+	
+}
+
+/* Description of Image */
+div.imgTitle {
+	padding: 5px;
+	font-size: 20px;
+	font-family: montserrat;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add Responsiveness */
+.responsive {
+	padding: 5px;
+    float: left;
+    width: 24.99999%;
+}
+
+/* The Modal (background) */
+#imgModal {
+    z-index: 2; /* Sit on top */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.imgModal-content {
+    margin: 0 auto;
+    display: block;
+    max-width: 70vw;
+	max-height: 40vw;
+	border-radius: 5px;
+}
+
+#title {
+	margin: auto;
+	display: block;
+	font-family: montserrat;
+	font-size: 30px;
+	width: 80%;
+	color: #ccc;
+	padding-top: 15px;
+	text-align: center;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+	font-family: futuras;
+	font-size: 17px;
+    width: 80%; 
+    max-width: 50vw;
+    text-align: justify;
+    color: #ccc;
+    padding: 10px 0;
+}
+ 
+/* Add Animation */
+.imgModal-content, #caption, #title {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeImg {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeImg:hover,
+.closeImg:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Columns */
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .imgModal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Clear Floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#loadMoreGallery {
+	padding-top: 7px;
+	font-family: montserrat;
+	text-align: center;
+	height: 100px;
+}
+
+#loadMoreGallery button {
+	background-color: #f5f5ef;
+	color: black;
+	border: none;
+	width: 200px;
+	height: 80px;
+	font-size: 25px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+#loadMoreGallery button:focus {
+	outline: 0;
+}
+
+#loadMoreGallery button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#loadMoreGallery button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 20px;
+	content: "\e259";
+	position: absolute;
+	opacity: 0;
+	bottom: -19px;
+	left: 60px;
+	transition: 0.5s;
+}
+
+#loadMoreGallery button:hover span {
+	padding-bottom: 20px;
+}
+
+#loadMoreGallery button:hover span:after {
+	opacity: 1;
+	bottom: -10px;
+	left: 60px;
+}

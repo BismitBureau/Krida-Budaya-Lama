@@ -1,0 +1,185 @@
+@font-face {
+  font-family: LemonMilk;
+  src: url(LemonMilk.otf);
+}
+
+@font-face {
+	font-family: oratorstd;
+	src: url(oratorstd.otf);
+}
+
+@font-face {
+	font-family: futuras;
+	src: url(Futura.ttf);
+}
+
+#achievementWrapper {
+	background-color: #f5f5ef;
+	padding: 6vw 5vw;
+}
+
+#content {
+	background-color: white;	
+	/* border: solid #d9d9d9 5px; */
+	border-radius: 20px;
+	box-shadow: 0px 0px 8px #b3b3b3;
+}
+
+.achievementHeader {
+	padding-top: 60px;
+	padding-bottom: 70px;
+}
+
+.pageTitle {
+	margin: 0 auto;
+	text-align: center;
+	font-family: montserrat;
+	font-size: 70px;
+	text-shadow: 0px 5px 5px #b3b3b3;
+}
+
+hr {
+	border-width: 7px;
+	border-color: #e0e0d1;
+	box-shadow: 0px 4px 4px #b3b3b3;
+}
+
+.achievementBox {
+	position: relative;
+	padding: 0 20px;
+}
+
+.achievementContent {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding-bottom : 6vw;
+	opacity: 0;
+	-moz-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+	-moz-transform: translate3d(0px, -1vw, 0px);
+	-webkit-transform: translate3d(0px, -1vw, 0px);
+	-o-transform: translate(0px, -1vw);
+	-ms-transform: translate(0px, -1vw);
+	transform: translate3d(0px, -1vw, 0px);
+}
+
+.achievementContent.showContent {
+	opacity: 1;
+	-moz-transform: translate3d(0px, 0vw, 0px);
+	-webkit-transform: translate3d(0px, 0vw, 0px);
+	-o-transform: translate(0px, 0vw);
+	-ms-transform: translate(0px, 0vw);
+	transform: translate3d(0px, 0vw, 0px);
+}
+
+.achievementContent table tr td {
+	vertical-align: top;
+}
+
+.wrapper {
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.wrapper:hover {
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+.vr {
+	opacity: 0;
+    width:7px;
+    background-color:#20d0ff;
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left:50%;
+    z-index: 0;
+	-moz-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+}
+
+.vr.showContent {
+	opacity: 0.5;
+}
+
+.circlebox {
+	width: 32%;
+	height: auto;
+	text-align: center;
+	vertical-align: top;
+}
+
+.yearCircle {
+	vertical-align: middle;
+	width: 280px;
+	height: 280px;
+	background-color: #fde25f;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 50%;
+	border-color: #20d0ff;
+	font-family: LemonMilk;
+	font-size: 55px;
+}
+
+.tahun {
+	margin-right: 15px;
+}
+
+.achievementInfo1, .achievementInfo2 {
+	width: 34%;
+	font-family: futuras;
+	font-size: 4.5vw;
+	text-align: left;
+}
+
+.achievementInfo1 {
+	padding-right: 10px;
+}
+
+.achievementInfo2 {
+	padding-left: 10px;
+}
+
+#lastContent {
+	background-color: white;
+}
+
+.footerBtn:hover {
+	-webkit-animation-name: spin; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: spin;
+    animation-duration: 1s;
+}
+
+@media screen and (min-width:1024px) {	
+
+}
+
+@media only screen and (max-width: 1065px) {
+
+}
+
+@media only screen and (max-width: 767px) {	
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+/* Standard syntax */
+@keyframes spin {
+	100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+}

@@ -1,0 +1,441 @@
+
+
+@font-face {
+	font-family: oratorstd;
+	src: url(OratorStd.otf);
+}
+
+@font-face {
+  font-family: futuras;
+  src: url(Futura.ttf);
+}	
+
+.calendarBox {
+	background-color: #f5f5ef;
+	padding: 4vw;
+	padding-top: 6vw;
+}
+
+.calendarAllBox {
+	background-color: white;
+	padding: 40px;
+	padding-bottom: 50px;
+	border: solid #d9d9d9 4px;
+	border-radius: 20px;
+}
+
+.calendar h1 {
+	margin-left: 20px;
+	font-size: 67px;
+	font-family: montserrat;
+}
+
+.kalender, .kalender td, .kalender tr {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 95%;
+	height: 100px;
+	border : 4px solid black;
+	font-family: montserrat;
+	font-size: 35px;
+}
+
+.kalender td, .kalender tr {
+	padding-left: 9px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.kalender td {
+	width: 60px;
+	height: 60px;
+}
+
+.calendarToday {
+	background-color: #FDE758;
+}
+
+.calendarEvent {
+	background-color: #00D1FF;
+}
+
+h1{
+    font-family: montserrat !important;
+}
+
+
+
+#calendarNext {
+	border-radius: 10px;
+	border: solid #bfbfbf 3px;
+	font-size: 50px;
+	font-family: montserrat;
+	margin-right: 22px;
+	box-shadow: -5px 5px 7px #b3b3b3;
+}
+
+#calendarPrev {
+	border-radius: 10px;
+	border: solid #bfbfbf 3px;
+	font-size: 50px;
+	font-family: montserrat;
+	margin-left: 20px;
+	box-shadow: 5px 5px 7px #b3b3b3;
+}
+
+.calendarCurrentBox {
+	margin-top: 4vw;
+	padding: 40px 60px;
+	overflow: auto;
+	max-height: 1200px;
+	background-color: white;
+	width: 100%;
+	border: solid #d9d9d9 4px;
+	border-radius: 20px;
+}
+
+#currentDate {
+	font-family: montserrat;
+	font-size: 67px;
+}
+
+#currentEvent {
+	padding-top: 10px;
+	font-family: oratorstd;
+	font-size: 55px;
+	letter-spacing: -3px;
+}
+
+.postEvents {
+	margin-top: 10px;
+	padding: 15px 15px;
+	/* border: solid #d9d9d9 5px; */
+	box-shadow: 3px 3px 15px #b3b3b3;
+}
+
+.imgEvents {
+	padding: 20px 20px;
+}
+
+.imgEvents img {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+			
+.titleEvents {
+	font-family: oratorstd;
+	font-size: 67px;
+	text-align: center;
+	padding: 20px 20px;
+}
+
+.snippetEvents {
+	font-family: futuras;
+	text-align: justify;
+	font-size: 55px;
+	padding: 20px 20px;
+}
+
+.readMoreEvents {
+	text-align: right;
+	padding: 0px 25px;
+	padding-top: 25px;
+	padding-bottom: 10px
+}
+
+.readMoreEvents button {
+	background-color: white;
+	border: none;
+	color: black;
+	font-size: 60px;
+	font-family: oratorstd;
+	text-align: right;
+	width: 500px;
+	cursor: pointer;
+	
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.readMoreEvents button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.readMoreEvents button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 35px;
+	content: "\e258";
+	position: absolute;
+	opacity: 0;
+	top: 12px;
+	right: -30px;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.readMoreEvents button:hover span {
+	padding-right: 50px;
+}
+
+.readMoreEvents button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.currentPostSpace {
+	height: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+	
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+#clockdiv {
+	padding-left: 4vw;
+	padding-right: 4vw;
+	background-color: #f5f5ef;
+}
+
+#clockdiv h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	font-family: montserrat;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 67px;
+	padding: 20px;
+}
+
+#wrapper2 {
+	padding: 0 1.5vw;
+	background-color: white;
+	border: solid #d9d9d9 4px;
+	border-radius: 20px;
+}
+
+.daysClk, .hoursClk, .minutesClk, .secondsClk {
+	font-family: montserrat;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 60px;
+	padding: 10px;
+	box-shadow: 0px -5px 5px #b3b3b3;
+	border-radius: 5px;
+}
+/* 
+#eventPembatas {
+	border-style: solid;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	height: 20px;
+	border-color: #D9D9D9;
+} */
+
+#eventContent2 {
+	background-color: #f5f5ef;
+	padding: 4vw;
+	padding-bottom: 6vw;
+}
+
+#wrapper3 {
+	background-color: white;
+	border: solid #d9d9d9 4px;
+	border-radius: 20px;
+	padding-bottom: 20px;
+}
+
+.titleBox {
+	font-family: montserrat;
+	font-size: 67px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.eventBox {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 32px;
+	padding: 40px 30px;
+	opacity: 0;
+	box-shadow: 3px 3px 15px #b3b3b3;
+	
+	-moz-transition: all 1.5s ease;
+	-webkit-transition: all 1.5s ease;
+	-o-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+	
+	-moz-transform: translate3d(-5vw, 0px, 0px);
+	-webkit-transform: translate3d(-5vw, 0px, 0px);
+	-o-transform: translate(-5vw, 0px);
+	-ms-transform: translate(-5vw, 0px);
+	transform: translate3d(-5vw, 0px, 0px);
+}
+
+.showContent {
+	opacity: 1;
+	
+	-moz-transform: translate3d(0px, 0vw, 0px);
+	-webkit-transform: translate3d(0px, 0vw, 0px);
+	-o-transform: translate(0px, 0vw);
+	-ms-transform: translate(0px, 0vw);
+	transform: translate3d(0px, 0vw, 0px);
+}
+
+.eventBoxPicture {
+	padding: 20px;
+}
+
+.eventBoxPicture img{
+	margin: 0 auto;
+}
+
+.eventBoxTitle {
+	padding: 20px;
+	font-family: oratorstd;
+	font-size: 67px;
+	text-align: center;
+}
+
+.eventBoxSnippet {
+	padding: 0px 20px;
+	font-family: futuras;
+	font-size: 55px;
+	text-align: justify;
+}
+
+.eventBtnBox {
+	padding: 0 20px;
+	padding-top: 30px;
+	text-align: right;
+	font-family: oratorstd;
+}
+
+.eventBtnBox button {
+	text-align: right;
+	border: none;
+	background-color: white;
+	color: black;
+	font-size: 60px;
+	width: 500px;
+	cursor: pointer;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.eventBtnBox button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.eventBtnBox button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 35px;
+	content: "\e258";
+	position: absolute;
+	opacity: 0;
+	top: 12px;
+	right: -30px;
+	
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.eventBtnBox button:hover span {
+	padding-right: 50px;
+}
+
+.eventBtnBox button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.eventsSpace {
+	height: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+	
+}
+
+#loadMoreEvents {
+	padding-top: 20px;
+	font-family: oratorstd;
+	text-align: center;
+	height: 150px;
+}
+
+#loadMoreEvents button {
+	background-color: white;
+	color: black;
+	border: none;
+	width: 500px;
+	height: 130px;
+	font-size: 60px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+#loadMoreEvents button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+#loadMoreEvents button span:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 50px;
+	content: "\e259";
+	position: absolute;
+	opacity: 0;
+	bottom: -24px;
+	left: 135px;
+	transition: 0.5s;
+}
+
+#loadMoreEvents button:hover span {
+	padding-bottom: 20px;
+}
+
+#loadMoreEvents button:hover span:after {
+	opacity: 1;
+	bottom: -15px;
+	left: 135px;
+}
+
+
+@media only screen and (max-width: 1200px) {	
+
+}
