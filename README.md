@@ -1,1 +1,0 @@
-# Krida-Budaya-Lama
