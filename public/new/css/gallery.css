@@ -1,0 +1,93 @@
+.isiCarousel {
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.judulDaerah {
+    color: #20d0ff;
+    font-size: 27px;
+    text-align: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+html {
+	height: 100%;
+}
+
+
+#header-container {
+	font-family: 'Roboto-Bold', sans-serif;
+	font-size: 20px;
+	display: block;
+    position: absolute;
+    width: 320px;
+    height: 55px;
+	left: 50%;
+    margin-left: -160px;
+    border-radius: 25px;
+    border: 1px solid #F3A183;
+}
+
+#header-container:hover {
+    background: -webkit-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* W3C */
+    color: white;
+}
+
+.header-container:hover {
+    background: -webkit-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #EC6F66 10%, #F3A183 90%); /* W3C */
+}
+/* Select style here */
+
+select {
+	margin: 0 auto;
+	color: #EC6F66;
+	width: 310px;
+	padding: 15px;
+	height: 25px;
+	cursor: pointer;
+    background: transparent;
+}
+
+select:hover {
+	background-color: transparent;
+	color: white;
+	padding: 15px 5px 15px 25px;
+}
+
+select option {
+	background-color: white;
+	color: gray;
+	width: 310px;
+	padding: 10px 15px;
+	height: 20px;
+	cursor: pointer;
+}
+
+select option:hover {
+	padding-left: 25px;
+	width: 270px;
+	color: #EC6F66;
+}
+
+.height-500 {
+    height: 500px;
+}

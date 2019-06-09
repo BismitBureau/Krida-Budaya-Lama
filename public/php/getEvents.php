@@ -28,7 +28,7 @@
 	$sql = "SELECT * FROM event_posts WHERE date='".$date."'";
 	$result = mysqli_query($conn, $sql);
 
-	echo "<div id='currentDate'> ".$_GET["day"]." ".date('F', mktime(0, 0, 0, $_GET["month"], 10))." ".$_GET["year"]." </div>";
+	echo "<h2 class='date-title' id='currentDate'> ".$_GET["day"]." ".date('F', mktime(0, 0, 0, $_GET["month"], 10))." ".$_GET["year"]." </h2>";
 	if(mysqli_num_rows($result) > 0) {
 		foreach($result as $event) {
 			echo '<div class="postEvents row">';
@@ -45,14 +45,9 @@
 			echo '				</div>';
 			echo '			</tr>';
 			echo '			<tr> ';
-			echo '				<div class="snippetEvents">';
+			echo '				<p style="text-align: justify; color: black" class="py-4 snippetEvents">';
 			echo 				(strcmp($lang,'en') == 0 ? $event['snippeten'] : $event['snippetid'] )	;
-			echo '				</div>';
-			echo '			</tr>';
-			echo '			<tr> ';
-			echo '				<div class="readMoreEvents">';
-			echo '					<button onclick="goto('.$event['id'].')"><span>read more</span></button>';
-			echo '				</div>';
+			echo '				<a  onclick="goto('.$event['id'].')" style="color: #20d0ff;">Read More</a></p>';
 			echo '			</tr>';
 			echo '		</table>';
 			echo '	</div>';
@@ -60,6 +55,6 @@
 			echo '<br>';
 		}
 	} else {
-	    	echo "<div id='currentEvent'> NO EVENTS(S) </div>";
+	    	echo "<p style='text-align: justify; color: black' id='currentEvent'> NO EVENTS(S) </p>";
 	}
 ?>

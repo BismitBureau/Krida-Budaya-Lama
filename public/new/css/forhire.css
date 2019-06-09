@@ -1,0 +1,30 @@
+.kotak {
+    padding: 5px;
+    height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#persegi {
+    width: 250px;
+    height: 5px;
+    background: #EFFF3B;
+    border-radius: 8p
+}
+
+.isiKotak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isiCarousel {
+    padding: 10px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

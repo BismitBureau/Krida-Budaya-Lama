@@ -18,11 +18,11 @@
 			<div class="form-group">
 	            <label>About (Indonesia) </label>
 	            <textarea class="form-control" name="id" rows="10" placeholder="Enter ...">{{$about['aboutid']}}</textarea>
-	        </div>      
+	        </div>
 			<div class="form-group">
 	            <label>About (English) </label>
 	            <textarea class="form-control" name="en" rows="10" placeholder="Enter ...">{{$about['abouten']}}</textarea>
-	        </div>    	
+	        </div>
         </div>
         <div class="box-footer">
         	<button type="submit" class="btn btn-primary">Save</button>

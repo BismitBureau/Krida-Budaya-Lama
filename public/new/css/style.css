@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.litar-logo-navbar {
+    max-width: 100%;
+}
+
+.btn {
+    border-radius: 50px !important;
+    border-color: #17a2b8;
+    color: #17a2b8;
+}
+
+.btn:hover {
+    border-color: #17a2b8;
+    color: white;
+}
+
+#kotak {
+    width: 100px;
+    height: 5px;
+    background: #EFFF3B;
+    border-radius: 8px;
+}
+
+#assetline {
+    width: 200px;
+    height: 4px;
+    top: 4697px;
+    left: 20px;
+    z-index: 20081;
+    margin: 1em auto;
+    background: #EFFF3B;
+    border-radius: 8px;
+}
+
+.bg-biru {
+    background-color: #2DBACE;
+    width: 100%;
+    position: relative;
+    /* height: 350px; */
+}

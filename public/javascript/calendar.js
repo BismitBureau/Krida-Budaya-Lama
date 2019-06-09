@@ -33,7 +33,7 @@ function prevMonth() {
 }
 
 function generateCalendar() {
-	 $.get("//kridabudaya.com/php/getCalendar.php?q=gen",{ 'month': bulan, 'year': tahun }, function(data){
+	 $.get("//localhost:9000/php/getCalendar.php?q=gen",{ 'month': bulan, 'year': tahun }, function(data){
        	$(".calendar").html(data);
     });
 

@@ -1,0 +1,142 @@
+#ai-center {
+    overflow-y: hidden;
+}
+
+h2 {
+    overflow-x: auto;
+}
+
+h2 {
+    overflow-x: visible;
+}
+
+.firstSection {
+    min-height: 50%;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+background-image: url('img/panah-judul.png');
+z-index: 999;
+color: white;
+padding: 1em;
+overflow-y: hidden;
+background-repeat: no-repeat"
+
+/* .container{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0px;
+  } */
+
+
+/*
+  .aicentertitle {
+
+    font-weight: bold !important;
+    font-size: 1em;
+
+    display: table-cell;
+    padding: 1em;
+    letter-spacing: 0.3em;
+    color: white;
+    background-color: #60B854;
+  } */
+
+.shadow {
+    box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#map {
+    width: 100%;
+    height: 51vh;
+}
+
+@media only screen and (max-width: 992px) {
+    section {
+        height: fit-content;
+    }
+    .firstSection {
+        height: fit-content;
+    }
+    .title-area {
+        position: relative;
+    }
+    /* .description{
+    padding-right: 10vw;
+  } */
+    /*
+    #map {
+      padding-right: 10vw;
+    } */
+    iframe {
+        padding-right: 10vw;
+        width: 80%;
+    }
+}
+
+
+/* #outermap{
+      padding-right: 9vw;
+    }
+  } */
+
+@media only screen and (min-width: 767px) {
+    .video-container {
+        float: none;
+        clear: both;
+        width: 100%;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.youtube {
+    /* background-image: url(../images/laptop.svg); */
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

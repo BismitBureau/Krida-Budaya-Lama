@@ -17,6 +17,7 @@
 		return $conn;
 	}
 
+
 	date_default_timezone_set("Asia/Jakarta");
 	$q = $_REQUEST["q"];
 	$todayDate = date("d");
@@ -52,32 +53,34 @@
 			die("Connection failed: " . mysqli_connect_error());
 		}
 
-		echo "<h1 style="."font-family:LemonMilk;"."> ".$monthName." ".$year." </h1>";
-		echo "<table class='kalender' style='width=100%'>";
-		echo "	<tr id='namaHari'>";
-		echo "		<td> Sun </td>";
-		echo "		<td> Mon </td>";
-		echo "		<td> Tue </td>";
-		echo "		<td> Wed </td>";
-		echo "		<td> Thu </td>";
-		echo "  	<td> Fri </td>";
-		echo "		<td> Sat </td>";
+		echo "<header class='cal-head'>";
+
+		echo "<h2 class='cal-h2'>".$monthName." ".$year." </h2>";
+		echo "<table class='cal-table'>";
+		echo "	<tr class='cal-tr'>";
+		echo "		<td class='cal-td'> Sun </td>";
+		echo "		<td class='cal-td'> Mon </td>";
+		echo "		<td class='cal-td'> Tue </td>";
+		echo "		<td class='cal-td'> Wed </td>";
+		echo "		<td class='cal-td'> Thu </td>";
+		echo "  	<td class='cal-td'> Fri </td>";
+		echo "		<td class='cal-td'> Sat </td>";
 		echo "	</tr>";
 		for($i = 0; $i < 5; $i++) {
-			echo "<tr>";
+			echo "<tr class='cal-tr'>";
 			for($j = 0; $j <7; $j++) {
 				$sql = "SELECT * FROM event_posts WHERE date='".$year."-".$month."-".$curDay."'";
 				// echo $sql."<br>";
-				if($curDay > 0 && $curDay <= $maxDay)
-					$result = mysqli_query($conn, $sql);
+				// if($curDay > 0 && $curDay <= $maxDay)
+				$result = mysqli_query($conn, $sql);
 				echo "<td ";
 				if($GLOBALS["todayDate"] == $curDay && $GLOBALS["todayMonth"] == $month && $GLOBALS["todayYear"] == $year)
-					echo "class='calendarToday'";
+					echo "class='calendarToday cal-td selected'";
 				else if(mysqli_num_rows($result) > 0) {
-					echo "class='calendarEvent'";
+					echo "class='calendarEvent cal-td selected-event'";
 				}
 				if($curDay > 0 && $curDay <= $maxDay)
-					echo "onclick='getEvents(".$curDay.",".$month.",".$year.")'";
+					echo "class='calendarEvent cal-td' onclick='getEvents(".$curDay.",".$month.",".$year.")'";
 				echo ">";
 
 				if($curDay > 0 && $curDay <= $maxDay) {
@@ -89,9 +92,9 @@
 			echo "</tr>";
 		}
 
-		echo "<tr>";
+		echo "<tr class='cal-tr'>";
 		for($j = 0; $j <2; $j++) {
-			echo "<td ";
+			echo "<td class='cal-td'";
 			echo ">";
 
 			if($curDay > 0 && $curDay <= $maxDay) {

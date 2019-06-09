@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	var $window = $(window);
 	var animate_galleryPost = [];
-    $('.galleryPost').each(function() { 
+    $('.galleryPost').each(function() {
 		animate_galleryPost.push($(this));
 	});
-	
+
 	function check_if_in_view() {
 		var window_height = $window.height();
 		var window_top_position = $window.scrollTop();
@@ -15,11 +15,11 @@ $(document).ready(function(){
 			var element_height = $element.outerHeight();
 			var element_top_position = $element.offset().top;
 			var element_bottom_position = (element_top_position + element_height);
- 
+
 			if ((element_bottom_position >= window_top_position) &&
 				(element_top_position <= window_bottom_position)) {
 				$element.addClass('tes');
-			} 
+			}
 		});
 	}
 	$window.on('scroll resize', check_if_in_view);
@@ -29,8 +29,8 @@ $(document).ready(function(){
 $(document).ready(function() {
 	var modal = document.getElementById('imgModal');
 	var span = document.getElementsByClassName("closeImg")[0];
-	
-	span.onclick = function() { 
+
+	span.onclick = function() {
 	    modal.style.display = "none";
 	}
 

@@ -1,133 +1,93 @@
-@extends('layout.master')
+@extends('layout/master')
 
-@section('styling')
-  <script src="{{ url('javascript/gallery.js') }}"></script>
-  <link rel="stylesheet" href="{{ url('style/index.css') }}">
-  <link rel="stylesheet" href="{{ url('style/gallery.css') }}">
-  <script>
-      function ons(obj){
-          console.log(obj.value);
-      }
-  </script>
+@section('title', 'Gallery')
+@section('extracss')
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('new/css/gallery.css') }}">
 @endsection
 
+@section('extrajs')
+<script src="{{ asset('new/js/gallery.js') }}"></script>
+@endsection
 
 @section('content')
 <?php
 	$count = 0;
 ?>
-<div class="topBorder"></div>
-
-<div id="galleryContent">
-    <div class="form-group">
-        <label for="origin">Asal</label>
-        <select class="form-control" id="origin" onchange="window.location.href = '{{ url($lang . '/gallery') }}/' + this.value">
-            @foreach($data["lsorigin"] as $lsorigins)
-            <?php
-                $slug = strtolower(preg_replace('/[^a-z0-9]+/i', '_', $lsorigins['origin']));
-                $selected = strcmp($slug, $data['orig']) == 0 ? 'selected' : ''
-            ?>
-            <option value="{{ $slug }}" {{ $selected }}>{{ $lsorigins["origin"] }}</option>
-            @endforeach
-        </select>
+<div class="mt-5 mb-3">
+    <h2 style="text-align: center" class="pt-4">GALLERY </h2>
+    <div id="assetline" class="">
+        <div class="mjs-object-content"></div>
     </div>
 
-  @foreach($data["gallery"] as $gallery)
-  @if($data['orig'] == 'all' || $data['orig'] == strtolower(preg_replace('/[^a-z0-9]+/i', '_', $gallery['origin'])))
-	<!-- tari 1 -->
-  <div class="container-fluid galleryPost">
-    <div class="row">
-      <a class="{{ 'galleryModalLink'.(++$count) }} ">
-        <img src="{{ url($gallery['imageURL']) }}" class="img-responsive">
-        <div class="galleryInfo">
-          <h1>{{ strcmp($lang,'en')==0 ? $gallery['titleen'] : $gallery['titleid'] }}</h1>
-		  <p>
-			{{ strcmp($lang,'en')==0 ? $gallery['descriptionen'] : $gallery['descriptionid'] }}         
-		  </p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-	<!-- isi foto tari 1-->
-  <div id="{{ 'galleryModal'.$count }}" class="modal">
-	<div class="galleryModal-content">
-      
-	  <div class="galleryModal-header">
-		<span class="close glyphicon glyphicon-remove tolkon{{$count}}"></span>
-        <div class="galleryModalTitle">
-          {{ strcmp($lang,'en')==0 ? $gallery['titleen'] : $gallery['titleid'] }}
-        </div>
-      </div>
-
-      <div class="galleryModal-body">
-        @foreach($data['images'] as $image)
-        @if($image['gallery_id'] == $gallery['id'] && strcmp($image['imageURL'],$gallery['imageURL'])!=0)
-        <div class="responsive">
-          <div class="imgPost">
-            <img class="thisImg" src="{{ url($image['imageURL']) }}">
-            <div class="imgDesc">
-				{{ strcmp($lang,'en')==0 ? $image['descriptionen'] : $image['descriptionid'] }}
+    <div class="row mb-5">
+        <div id="wrapper" class="col-md-3 col-sm-12 py-5 mx-4">
+            <div class="form-group">
+					<section id="header-container">
+						<div data-cuteselect-item="955544">
+							<div id="title1" data-cuteselect-title="">{{ strcmp($lang,'en') == 0 ? 'Select origin of the dance ▼' : 'Pilih daerah tarian ▼' }}</div>
+							<div data-cuteselect-options="">
+								<div data-cuteselect-options-container="">
+									@foreach($data["lsorigin"] as $lsorigins)
+			                        <?php
+			                            $slug = strtolower(preg_replace('/[^a-z0-9]+/i', '_', $lsorigins['origin']));
+			                            $selected = strcmp($slug, $data['orig']) == 0 ? 'selected' : '';
+			                        ?>
+									<div data-cuteselect-value="{{ $slug }}" {{ $selected }}>{{ $lsorigins["origin"] }}</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+              </section>
             </div>
-			<!--
-            <div class="imgTitle">
-              {{ strcmp($lang,'en')==0 ? $image['titleen'] : $image['titleid'] }}
-            </div>
-			-->
-          </div>
         </div>
-        @endif
-        @endforeach
-
-        <div class="clearfix"></div>
-      </div>
-
-      <div class="galleryModal-footer">
-      </div>
-	  
-    </div>
-  </div>
-
-  <div class="gallerySpace"></div>
-  @endif
-  @endforeach
-
-  
-  <!-- zoom tiap foto tari -->
-  <div id="imgModal" class="modal">
-	<span class="closeImg glyphicon glyphicon-remove"></span>
-	  <img class="imgModal-content" id="img01">
-	  <div id="title">DESCRIPTION</div>
-	  <div id="caption"></div>
-  </div>
-  
+		<div class="col-md-8">
+            <!--Photo carousel-->
+            <div class="card container mx-auto shadow mt-5 mx-auto" style="border-radius: 48px">
+                <div class="firstSection mx-auto px-4 col-lg-12 py-3 px-2">
+                    <div class="row py-0 overflow-x-show text-align-center">
+                            <div id="carouselTestimony" class="carousel slide" data-ride="carousel">
+                                <h2 id="title2" class="judulDaerah"><strong>DKI Jakarta</strong></h2>
+                                <ol class="carousel-indicators">
+									@for($i = 0; $i < sizeof($data['gallery']); $i++)
+                                    <li data-target="#carouselTestimony" data-slide-to="{{ $i }}" class="{{ $i == 0 ? 'active' : '' }}"></li>
+									@endfor
+                                </ol>
+                                <div class="carousel-inner">
+								<?php $count = true; ?>
+  								@foreach($data["gallery"] as $gallery)
+  								@if($data['orig'] == 'all' || $data['orig'] == strtolower(preg_replace('/[^a-z0-9]+/i', '_', $gallery['origin'])))
+								@if($count)
+									<div class="carousel-item active ">
+								@else
+									<div class="carousel-item">
+								@endif
+								<?php $count = false; ?>
+										<div class="isiCarousel">
+                                            <div class="col text-center">
+												<a class="{{ 'galleryModalLink'.(++$count) }} ">
+                                                	<h5>{{ strcmp($lang,'en')==0 ? $gallery['titleen'] : $gallery['titleid'] }}</P>
+                                                	<img class="d-block w-100" src="{{ url($gallery['imageURL']) }}">
+                                                	<p class="mt-3">{{ strcmp($lang,'en')==0 ? $gallery['descriptionen'] : $gallery['descriptionid'] }}</p>
+												</a>
+											</div>
+                                        </div>
+                                    </div>
+								@endif
+								@endforeach
+							</div>
+							<a class="carousel-control-prev" href="#carouselTestimony" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselTestimony" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-<?php
-	$count = 0;
-?>
-<script type="text/javascript">
-	$(document).ready(function() {
-		
-		@foreach($data["gallery"] as $gallery)
-		var {{ 'modal'.(++$count) }} = document.getElementById('{{ "galleryModal".$count }}');
-		var {{ 'span'.$count }} = document.getElementsByClassName("close glyphicon glyphicon-remove tolkon{{$count}}")[0];
-	
-		$("a.{{ 'galleryModalLink'.$count }}").click(function(){
-		   {{ 'modal'.$count }}.style.display = "block";
-		 });
-		 
-		{{ 'span'.$count }}.onclick = function() {
-		    {{ 'modal'.$count }}.style.display = "none";
-		}
-		
-		window.onclick = function(event) {
-			if (event.target == {{ 'modal'.$count }}) {
-				{{ 'modal'.$count }}.style.display = "none";
-			}
-		}
-		@endforeach
-		
-	});
-</script>
 @endsection

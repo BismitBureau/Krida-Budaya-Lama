@@ -22,6 +22,7 @@ use App\Recruitment;
 use App\SSO\SSO;
 use Hash;
 use Response;
+use Redirect;
 use DB;
 
 class KridaControl extends Controller
@@ -391,8 +392,10 @@ class KridaControl extends Controller
         $data["testimonis"] = testimoni::all();
         } else if(strcmp($curpage,"people")==0) {
           $data["people"] = people::all();
+          $data["about"] = homeContent::find(1);
         } else if(strcmp($curpage,"peoples")==0) {
           $data["people"] = people::all();
+          $data["about"] = homeContent::find(1);
         } else if (strcmp($curpage,"achievements")==0) {
           $data["achievements"] =  achievement::all();
         } else if (strcmp($curpage,"news")==0) {
@@ -658,8 +661,6 @@ class KridaControl extends Controller
         $data = $_POST;
         $admin = DB::table('admins')->where('name', $data['name'])->get();
         $hashedPassword = Admin::find($data);
-
-        return $admin;
 
       if(count($admin) > 0) {
         $_SESSION['name'] = $data['name'];

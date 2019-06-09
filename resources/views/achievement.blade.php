@@ -1,55 +1,22 @@
 @extends('layout.master')
 
-@section('styling')
-  <script src="{{ url('javascript/achievement.js') }}"></script>
-  <link rel="stylesheet" href="{{ url('style/achievement.css') }}">
-  <link rel="stylesheet" href="{{ url('style/index.css') }}">
+@section('extracss')
+<link rel="stylesheet" type="text/css" href="{{ asset('new/css/achievements.css') }}">
+@endsection
+
+@section('extrajs')
 @endsection
 
 @section('content')
 
-<div class="topBorder"></div>
+<section>
+    <h2 style="text-align: center" class="pt-4">ACHIEVEMENTS</h2>
 
-<div id="achievementWrapper">
-	<div id="content">
-	 <div class="achievementHeader">
-	  <!--
-	  <table>
-		<tr>
-		  <td style="width : 10%;">
-
-		  </td>
-		  <td style="width : 20%;">
-			<hr>
-		  </td>
-		  <td style="width : 5%;">
-
-		  </td>
-		  <td style="width : 30%;">
-		-->	
-			<div id="tulisan">
-				OUR ACHIEVEMENTS
-			</div>
-		<!--  
-		  </td>
-		  <td style="width : 5%;">
-
-		  </td>
-		  <td style="width : 20%;">
-			<hr>
-		  </td>
-		  <td style="width : 10%;">
-
-		  </td>
-		</tr>	
-	  </table>
-	  -->
-	 </div>
-
-	  <div class="achievementBox">
-		<div class="vr">
-		</div>
-		<?php 
+    <div id="assetline" class="">
+       <div class="mjs-object-content"></div>
+   </div>
+   <div class="mx-auto pt-3">
+		<?php
 			$count = 0;
 			$now = '-1';
 			$last = '-1000';
@@ -66,52 +33,33 @@
 			}
 		?>
 		@for($num = 0; $num <= $now; $num++)
-		<div class="achievementContent" @if($num == $now) id='lastContent' @endif>
-			<table class="wrapper" style="width:100%">
-				<tr>
-					<td class="achievementInfo1">	
-						@if($num%2==0)
-							<ul>
-								<?php
-									for($j = 0; $j < count($flag); $j++) if($flag[$j] == $num) {
-										if(strcmp($lang,'en') == 0)
-											echo '<li>'.$data['achievements'][$j]['stringen'].'</li>';
-										else
-											echo '<li>'.$data['achievements'][$j]['stringid'].'</li>';
-									}
-								?>
-							</ul>
-						@endif
-					</td>
-					<td class="circlebox">
-						<button class="yearCircle">
-							<?php
-								for($j = 0; $j < count($flag); $j++) if($flag[$j] == $num) {
-									echo $data['achievements'][$j]['year'];
-									break;
-								}
-							?>
-						</button>
-					</td>
-					<td class="achievementInfo2">
-						@if($num%2==1)
-							<ul>
-								<?php
-									for($j = 0; $j < count($flag); $j++) if($flag[$j] == $num) {
-										if(strcmp($lang,'en') == 0)
-											echo '<li>'.$data['achievements'][$j]['stringen'].'</li>';
-										else
-											echo '<li>'.$data['achievements'][$j]['stringid'].'</li>';
-									}
-								?>
-							</ul>
-						@endif				
-					</td>
-				</tr>
-			</table>
-		</div>
-		@endfor
-	  </div>
-	 </div>
-</div>
+        <div class="item">
+            <div class="image">
+                <div class="circular--landscape">
+                    <img style="object-fit: cover" src="{{ asset('new/img/tari.jpg') }}">
+                </div>
+            </div>
+            <div class="details">
+                <div>
+                    <h1><?php
+                        for($j = 0; $j < count($flag); $j++) if($flag[$j] == $num) {
+                            echo $data['achievements'][$j]['year'];
+                            break;
+                        }
+                    ?></h1>
+                    <p><?php
+						for($j = 0; $j < count($flag); $j++) if($flag[$j] == $num) {
+							if(strcmp($lang,'en') == 0)
+								echo '<li>'.$data['achievements'][$j]['stringen'].'</li>';
+							else
+								echo '<li>'.$data['achievements'][$j]['stringid'].'</li>';
+						}
+					?></p>
+                </div>
+            </div>
+        </div>
+        @endfor
+    </div>
+</section>
+
 @endsection
